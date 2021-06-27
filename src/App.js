@@ -40,7 +40,7 @@ class App extends Component {
       <>
         <h1>Phonebook</h1>
         <form>
-          <label>
+          <label htmlFor={this.idName}>
             Name{""}
             <input
               type="text"
@@ -53,7 +53,7 @@ class App extends Component {
               required
             />
           </label>
-          <label>
+          <label htmlFor={this.idNumber}>
             Number{""}
             <input
               type="tel"
