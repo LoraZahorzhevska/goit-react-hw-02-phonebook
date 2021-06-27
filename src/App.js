@@ -1,5 +1,3 @@
-// import { tSImportEqualsDeclaration } from "@babel/types";
-// import { name } from "commander";
 import React, { Component } from "react";
 import shortid from "shortid";
 import "./App.css";
