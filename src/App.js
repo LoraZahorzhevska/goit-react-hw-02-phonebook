@@ -7,14 +7,16 @@ import "./App.css";
 class App extends Component {
   state = {
     contacts: [
-      { name: "Rosie Simpson" },
-      { name: "Hermione Kline" },
-      { name: "Eden Clements" },
+      { name: "Rosie Simpson", number: "459-12-56" },
+      { name: "Hermione Kline", number: "443-89-12" },
+      { name: "Eden Clements", number: "645-17-79" },
     ],
     name: "",
+    number: "",
   };
 
   idName = shortid.generate();
+  idNumber = shortid.generate();
 
   handleChange = (event) => {
     const { name, value } = event.currentTarget;
@@ -53,12 +55,29 @@ class App extends Component {
               required
             />
           </label>
+          <label>
+            Number{""}
+            <input
+              type="tel"
+              name="number"
+              id={this.idNumber}
+              value={this.state.number}
+              onChange={this.handleChange}
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+              required
+            />
+          </label>
           <button type="submit">Add contact</button>
         </form>
         <h2>Contacts</h2>
         <ul>
-          {this.state.contacts.map(({ name }) => {
-            return <li key={name}>{name}</li>;
+          {this.state.contacts.map(({ name, number }) => {
+            return (
+              <li key={name}>
+                {name}: {number}
+              </li>
+            );
           })}
         </ul>
       </>
