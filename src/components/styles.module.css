@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.input {
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+::placeholder {
+  color: #13404b91;
+}
+
+.button {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(43, 42, 42);
+  color: aliceblue;
+}
+
+.button:hover,
+.button:focus {
+  background-color: aqua;
+  color: rgb(78, 78, 78);
+}
+
+.contact_container {
+  margin: 50px auto;
+  width: 800px;
+}
+
+.contact_form {
+  list-style: none;
+  display: inline;
+  text-align: center;
+}
+
+.contactlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
